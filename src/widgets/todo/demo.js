@@ -25,8 +25,30 @@ export default () => {
     buttonText: "添加待办"
   };
 
+  const view = {
+    ["Todo"]: {
+      ButtonTheme: {
+        Container:{
+          normal: {
+            background: {
+              color: "#c07b12"
+            }
+          }
+        }
+      },
+      InputTheme: {
+        Container:{
+          normal:{
+            margin: 10
+          }
+        }
+      }
+    }
+  };
+
   return (
     <Wrapper>
+      <Theme config={view}>
       <Todo
         data={data}
         config={config}
@@ -34,6 +56,7 @@ export default () => {
           console.log(res);
         }}
       />
+      </Theme>
     </Wrapper>
   );
 };

@@ -1,6 +1,6 @@
 {
-  "name": "@lugia/lugia-web-extend",
-  "version": "1.0.0-alpha-5",
+  "name": "@lugiatest/lugia-template",
+  "version": "1.0.0-alpha-10",
   "scripts": {
     "start": "lugia-scripts start",
     "build": "lugia-scripts build",
@@ -9,18 +9,19 @@
     "dist": "node scripts/create.js && npx cross-env BABEL_ENV=production gulp "
   },
   "dependencies": {
-    "@lugia/lugia-web": "1.2.0",
+    "@lugia/lugia-web": "1.2.1",
     "@lugia/object-utils": "^1.0.15",
     "@lugia/theme-css-hoc": "^1.0.63",
     "@lugia/theme-hoc": "^1.0.48",
-    "history": "^4.7.2",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "styled-components": "4.2.0"
+    "history": "^4.7.2"
   },
   "devDependencies": {
     "@lugia/lugiax-router": "^1.0.22",
-    "@lugia/mega-scripts": "1.4.11",
+    "@lugia/mega-scripts": "1.4.20",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-test-renderer": "^16.9.0",
+    "styled-components": "4.2.0",
     "babel-plugin-import": "^1.11.0",
     "prettier": "^1.19.1",
     "babel-core": "6.26.0",
@@ -38,6 +39,11 @@
     "gulp-uglify": "^3.0.1",
     "gulp-watch": "4",
     "shx": "0.2.2"
+  },
+  "peerDependencies": {
+    "react": ">16.8.0",
+    "react-dom": ">16.0.0",
+    "styled-components": "4.2.0"
   },
   "publishConfig": {
     "access": "public"
