@@ -14,7 +14,8 @@ export default {
       {
         libraryName: "@lugia/lugia-web",
         libraryDirectory: "dist"
-      }
+      },
+      "@lugia/lugia-web"
     ],
     [
       "import",

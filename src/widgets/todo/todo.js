@@ -11,7 +11,9 @@ const Container = CSSComponent({
   normal: {
     selectNames: [["width"], ["height"], ["background"]]
   },
-  css: `background: #fff;`
+  css: `background: #fff;
+        text-align: left;
+  `
 });
 
 const SingleLine = CSSComponent({
@@ -40,6 +42,12 @@ class Todo extends React.Component<any, any> {
 
   render() {
     const containerTheme = this.props.getPartOfThemeProps("Container");
+    //getPartOfThemeProps（themeName）  函数用来接收用户配置的主题,通过 themeName 来获取对应配置点的样式，然后传入对应要生效此样式的标签
+    //getPartOfThemeProps 和 getPartOfThemeHocProps的区别 ：
+    //getPartOfThemeProps 获取到的结果只包含 theme
+    //getPartOfThemeHocProps 获取到的结果为一个对象，包含{viewClass，theme} // 可打印看两个函数结果的区别
+    //如果是开发者自己写的标签  就使用getPartOfThemeProps函数  将结果传入对应标签的 themeProps 属性 如：<Container themeProps={containerTheme}>
+    //如果lugia-web组件， 就使用getPartOfThemeHocProps函数  将viewClass，theme传入对应的组件 如  <Input viewClass={viewClass} theme={theme}  />
     const titleTheme = this.props.getPartOfThemeProps("Title");
     const descriptionTheme = this.props.getPartOfThemeProps("Description");
     const inputTheme = this.getThemeForLugiaWeb(
@@ -93,6 +101,31 @@ class Todo extends React.Component<any, any> {
     const { theme, viewClass } = this.props.getPartOfThemeHocProps(themeName);
     const resultTheme = deepMerge({ [[viewClass]]: defaultTheme }, theme);
     return { theme: resultTheme, viewClass };
+    ////getPartOfThemeHocProps(themeName)  函数用来接收用户配置的主题,通过 themeName 来获取对应配置点的样式，然后传入对应要生效此样式的组件
+    //如用户配置信息如下：
+    //   const view = {
+    //     ["Todo"]: {
+    //       ButtonTheme: {
+    //        Container:{
+    //          normal: {
+    //            background: {
+    //              color: "#c07b12"
+    //            }
+    //          }
+    //        }
+    //       },
+    //       InputTheme: {
+    //        Container:{
+    //          normal:{
+    //            margin: 10
+    //          }
+    //        }
+    //       }
+    //     }
+    //   };
+
+    //getPartOfThemeHocProps(‘ButtonTheme’) 就只会获取到 ButtonTheme的值
+    //getPartOfThemeHocProps(‘InputTheme’) 就会获取到 InputTheme 的值
   };
 
   getListFromData = data => {

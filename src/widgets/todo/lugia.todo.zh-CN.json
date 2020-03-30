@@ -46,20 +46,33 @@
       "disabled": []
     },
     "ButtonTheme": {
-      "name": "新增按钮",
-      "desc": "新增按钮的样式",
-      "normal": [["margin"], ["background"], ["border"],["color"],["font"]],
-      "hover": [],
-      "clicked": [],
-      "disabled": []
+      "name": "添加按钮",
+      "theme":{
+        "Container":{
+          "name": "新增按钮",
+          "desc": "新增按钮的样式",
+          "normal": [["margin"], ["background"], ["border"],["color"],["font"]],
+          "hover": [],
+          "clicked": [],
+          "disabled": []
+        }
+      }
+
+
     },
     "InputTheme": {
-      "name": "输入框按钮",
-      "desc": "输入框的样式",
-      "normal": [["margin"], ["border"],["color"],["font"]],
-      "hover": [],
-      "clicked": [],
-      "disabled": []
+      "name": "输入框样式",
+      "theme":{
+        "Container":{
+          "name": "输入框样式",
+          "desc": "输入框的样式",
+          "normal": [["margin"], ["border"],["color"],["font"]],
+          "hover": [],
+          "clicked": [],
+          "disabled": []
+        }
+      }
+
     }
   }
 }
