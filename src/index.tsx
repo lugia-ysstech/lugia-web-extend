@@ -1,15 +1,15 @@
 import React from "react";
-import { createBrowserHistory } from "history";
-import { createApp, go, render } from "@lugia/lugiax-router";
+import {createBrowserHistory} from "history";
+import {createApp, render} from "@lugia/lugiax-router";
 import "@lugia/lugia-web/dist/css/global.css";
-import Main from "./App";
+import Router from "./router";
 
 const history = createBrowserHistory();
 
 const App = createApp(
   {
     "/": {
-      component: Main
+      component: Router
     }
   },
   history

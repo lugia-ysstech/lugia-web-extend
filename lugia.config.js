@@ -1,34 +1,35 @@
-import { join, } from 'path';
+import { join } from 'path';
+
 export default {
   disableCSSModules: true,
   cssModulesWithAffix: true,
-  entry: "./src/index.js",
-  publicPath: "/",
+  entry: './src/index.tsx',
+  publicPath: '/',
   alias: {
-    "@": join(__dirname, "./src")
+    '@': join(__dirname, './src'),
   },
   extraBabelIncludes: [/decamelize/],
   extraBabelPlugins: [
     [
-      "import",
+      'import',
       {
-        libraryName: "@lugia/lugia-web",
-        libraryDirectory: "dist"
+        libraryName: '@lugia/lugia-web',
+        libraryDirectory: 'dist',
       },
-      "@lugia/lugia-web"
+      '@lugia/lugia-web',
     ],
     [
-      "import",
+      'import',
       {
-        libraryName: "@/components",
-        libraryDirectory: "",
-        camel2DashComponentName: false
+        libraryName: '@lugia/lugia-mega-ui',
+        libraryDirectory: 'dist',
       },
-      "@/components"
-    ]
+      '@lugia/lugia-mega-ui',
+    ],
   ],
-  applyWebpack(webpackConfig, { webpack, merge }) {
+  applyWebpack(webpackConfig) {
     return webpackConfig;
   },
-  dllDependenciesExcludes: ['@lugia/lugia-web']
+
+  dllDependenciesExcludes: ['@lugia/lugia-web', '@lugia/lugia-mega-ui', 'rc-util', '@lugia/mega-scripts'],
 };
