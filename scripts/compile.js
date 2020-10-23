@@ -56,13 +56,12 @@ function getEnv() {
 }
 
 function singleCompile(path, cwd) {
-  const forkPath = join(path, './mega/singleCompile.js');
-
+  const forkPath = join(path, './singleCompile.js');
+  console.info('forkpath', forkPath);
   return fork(forkPath, [], {
     cwd,
     env: {
       ...getEnv(),
-      PATH: join(__dirname, './app/bin/node_modules/.bin'),
       NODE_ENV: 'production',
       __FROM_TEST: true,
       ESLINT: 'none',
