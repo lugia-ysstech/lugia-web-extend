@@ -1,11 +1,11 @@
 {
   "name": "@lugia/lugia-web-extend",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "scripts": {
     "start": "lugia-scripts start",
     "build": "lugia-scripts build",
     "test": "lugia-scripts test -w",
-    "clean": "npx shx rm -rf dist/ npm-shrinkwrap.all.json",
+    "clean": "npx shx rm -rf dist/ interface/ npm-shrinkwrap.all.json src/widgets/static src/widgets/designInfo.dll.json",
     "dist": "node scripts/create.js && npm run clean && node  --max-old-space-size=24000  scripts/compile.js && npx cross-env BABEL_ENV=production gulp"
   },
   "dependencies": {

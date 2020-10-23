@@ -1,5 +1,6 @@
 import designInfo, { load } from '../src/widgets/designInfo.js';
 import { version } from '../package.json';
+import {moduleName} from './config'
 
 function getComponentPropsArr(props, componentTypes) {
   const componentPropsKeys = props && Object.keys(props);
@@ -44,7 +45,7 @@ const componentTargets = {};
 designInfo.forEach(item => {
   const componentMeta = item.meta;
   const componentScreenshot = item.screenshot;
-  const componentModuleName = componentMeta.moduleName || '@lugia/lugia-web';
+  const componentModuleName = componentMeta.moduleName || moduleName;
   const componentTarget = item.target;
   const componentProps = componentMeta.props;
   const componentEvents = componentMeta.events;
@@ -101,7 +102,7 @@ designInfo.forEach(item => {
 });
 
 export default {
-  moduleName: '@lugia/lugia-web',
+  moduleName,
   metas: componentMetas,
   targets: componentTargets,
   load,

@@ -4,6 +4,7 @@
  * @emails lugia@ysstech.com
  * @author zenjava
  */
+const { name } = require('../package.json')
 module.exports = {
-  moduleName: "@lugiatest/lugia-template"
+  moduleName: name
 }
