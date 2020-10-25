@@ -1,6 +1,6 @@
 {
   "name": "@lugia/lugia-web-extend",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "scripts": {
     "start": "lugia-scripts start",
     "build": "lugia-scripts build",
@@ -14,7 +14,7 @@
     "@lugia/theme-hoc": "^1.1.12"
   },
   "devDependencies": {
-    "@lugia/devtools-widgets": "^1.0.0",
+    "@lugia/devtools-widgets": "^1.0.1",
     "@lugia/lugia-web": "^1.2.6-alpha.6",
     "@lugia/lugiax-router": "^1.0.22",
     "@lugia/mega-scripts": "^1.6.3",
