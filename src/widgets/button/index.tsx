@@ -5,5 +5,6 @@
  * @author zenjava
  */
 import React from 'react';
+import {Button} from '@lugia/lugia-web';
 
-export default () => <div>我是一个按钮</div>;
+export default () => <Button>A button</Button>;

@@ -5,12 +5,5 @@
  * @author zenjava
  */
 module.exports = {
-  react: 'React',
-  'react-dom': 'ReactDom',
-  '@lugia/lugiax': 'lugiax',
-  '@lugia/theme-config': 'lugiatheme',
-  '@lugia/theme-core': 'lugiadthemecore',
-  '@lugia/dict': 'lugiadict',
-  'styled-components': 'styled',
-  '@lugia/theme-hoc-devtools': 'LugiaThemeDevTools'
+
 }
