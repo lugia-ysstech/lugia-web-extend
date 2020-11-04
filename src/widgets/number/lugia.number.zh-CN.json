@@ -1,0 +1,13 @@
+{
+  "widgetName": "Number",
+  "title": "数字加减",
+  "desc": "数字加减",
+  "tag": "数字加减",
+  "props": {
+    "model": {
+      "type": "lugiaDModel",
+      "desc": "控制数字变换的model"
+    }
+  },
+  "category": ["通用"]
+}
