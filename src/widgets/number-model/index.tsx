@@ -6,9 +6,9 @@
 import React from "react";
 import { connect } from "@lugia/lugiax";
 interface TypeProps {
-  value: number;
-  onAdd: () => void;
-  onSubtract: () => void;
+  value?: number;
+  onAdd?: () => void;
+  onSubtract?: () => void;
 }
 
 const Model = (props: TypeProps) => {
@@ -23,8 +23,11 @@ const Model = (props: TypeProps) => {
   );
 };
 
-export default (props: { model: any }) => {
+export default (props: { model?: any }) => {
   const { model } = props;
+  if (!model) {
+    return <Model />;
+  }
   const Target = connect(
     model,
     (state: any) => {

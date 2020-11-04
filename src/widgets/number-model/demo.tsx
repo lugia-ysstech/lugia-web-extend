@@ -5,7 +5,13 @@
  */
 import React from "react";
 import Model from "./index";
+// @ts-ignore
 import model from "./model/number";
 export default () => {
-  return <Model model={model} />;
+  return (
+    <div>
+      aa
+      <Model />
+    </div>
+  );
 };
