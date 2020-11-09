@@ -1,6 +1,6 @@
 {
   "name": "@lugia/lugia-web-extend",
-  "version": "1.0.14",
+  "version": "1.0.19",
   "scripts": {
     "start": "lugia-scripts start",
     "build": "lugia-scripts build",
@@ -9,13 +9,16 @@
     "dist": "npm run clean && node  --max-old-space-size=24000  scripts/compile.js"
   },
   "dependencies": {
+    "@lugia/dict": "^1.0.5",
+    "@lugia/lugiax": "^1.2.2",
     "@lugia/object-utils": "^1.0.15",
-    "@lugia/theme-css-hoc": "^1.1.19",
+    "@lugia/theme-core": "^1.1.13",
+    "@lugia/theme-css-hoc": "^1.1.20",
     "@lugia/theme-hoc": "^1.1.12"
   },
   "devDependencies": {
     "@lugia/devtools-widgets": "^1.0.1",
-    "@lugia/lugia-web": "^1.2.6-alpha.6",
+    "@lugia/lugia-web": "^1.2.6-alpha.11",
     "@lugia/lugiax-router": "^1.0.22",
     "@lugia/mega-scripts": "^1.6.3",
     "@lugia/theme-core": "^1.1.13",
