@@ -1073,6 +1073,13 @@
     merge2 "^1.4.1"
     ts-import-plugin "^1.6.6"
 
+"@lugia/dict@^1.0.5":
+  version "1.0.5"
+  resolved "http://192.168.102.79:5001/@lugia%2fdict/-/dict-1.0.5.tgz#5dda42992f3e66f0d55a6a55d74891e78373caa2"
+  integrity sha1-XdpCmS8+ZvDVWmpV10iR54NzyqI=
+  dependencies:
+    tslib "^1.11.1"
+
 "@lugia/geometry@^1.0.13":
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/@lugia/geometry/-/geometry-1.0.13.tgz#6287f578fb6e8f47a4c46f10e3e60af13b257a07"
