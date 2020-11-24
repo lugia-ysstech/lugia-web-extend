@@ -6,9 +6,9 @@
  */
 const externals = require("./externals");
 const compileComponent = require('@lugia/devtools-widgets');
+const componentInvalid = require('../src/widgets/invalidComponent.json')
 
 const commonInvalid = [];
-const componentInvalid = [];
 const hideInTollPanelComponents = {};
 const themeInvalid = [...commonInvalid];
 
