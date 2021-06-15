@@ -1,9 +1,3 @@
-/**
- *
- *
- * @flow
- */
-
 import React from 'react';
 import {createRoute} from '@lugia/lugiax-router';
 const router = {
