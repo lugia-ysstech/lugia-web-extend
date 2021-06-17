@@ -2,21 +2,23 @@
   "name": "@lugia/lugia-web-extend",
   "version": "1.0.14",
   "scripts": {
+    "package": "node scripts/package.js",
     "start": "lugia-scripts start",
     "build": "lugia-scripts build",
     "test": "lugia-scripts test -w",
     "clean": "npx shx rm -rf dist/ interface/ npm-shrinkwrap.all.json src/widgets/static src/widgets/designInfo.dll.json",
-    "dist": "npm run clean && node  --max-old-space-size=24000  scripts/compile.js"
+    "dist": "npm run clean && node  --max-old-space-size=24000  scripts/build.js"
   },
   "dependencies": {
+    "@lugia/lugia-web": "1.2.9-alpha.73",
     "@lugia/object-utils": "^1.0.15",
     "@lugia/theme-css-hoc": "^1.1.19",
     "@lugia/theme-hoc": "^1.1.12"
   },
   "devDependencies": {
-    "@lugia/devtools-widgets": "^1.0.1",
     "@lugia/dict": "^1.0.5",
-    "@lugia/lugia-web": "^1.2.6-alpha.6",
+    "@lugia/lugia-package-demo": "^1.0.3",
+    "@lugia/lugia-package-widgets": "^1.0.5",
     "@lugia/lugiax-router": "^1.0.22",
     "@lugia/mega-scripts": "^1.6.3",
     "@lugia/theme-core": "^1.1.13",
@@ -51,9 +53,9 @@
     "typescript": "^4.0.3"
   },
   "peerDependencies": {
-    "@lugia/lugia-web": ">1.2.5",
-    "@lugia/theme-core": ">1.1.3",
     "@lugia/dict": ">1.0.5",
+    "@lugia/theme-config": ">1.1.3",
+    "@lugia/theme-core": ">1.1.3",
     "react": ">16.8.0",
     "react-dom": ">16.0.0",
     "styled-components": "4.2.0"
@@ -74,12 +76,6 @@
     "interface",
     "npm-shrinkwrap.json"
   ],
-  "babel": {
-    "presets": [
-      "react-app"
-    ],
-    "plugins": []
-  },
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.2.0"
