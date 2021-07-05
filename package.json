@@ -1,6 +1,6 @@
 {
   "name": "@lugia/lugia-web-extend",
-  "version": "1.0.14",
+  "version": "1.1.7",
   "scripts": {
     "package": "node scripts/package.js",
     "start": "lugia-scripts start",
@@ -71,11 +71,6 @@
     }
   },
   "main": "dist/designInfo.js",
-  "files": [
-    "dist",
-    "interface",
-    "npm-shrinkwrap.json"
-  ],
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.2.0"
