@@ -9,7 +9,7 @@ const demoCompile =new Compile({
   npmRegistry: 'https://registry.npmjs.org/',
   templateToCopyPath,
   projectPath,
-  demoProjectOutputPath: 'demo-tem',
+  demoProjectOutputPath: 'demo-site',
   entryFile:'createDemo/src/index.js',
   extraBabelIncludes:[ /decamelize/, /debug/],
   extraBabelPlugins:[
